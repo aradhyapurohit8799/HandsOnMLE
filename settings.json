@@ -1,0 +1,39 @@
+{
+    "editor.formatOnSave": true,
+    "python.pythonPath": "./workspace_venv/bin/python3",
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length=79"
+    ],
+    "python.sortImports.args": [
+        "--profile",
+        "black",
+        "--trailing-comma",
+        "--force-grid-wrap",
+        "0",
+        "--use-parentheses",
+        "--force-single-line-imports",
+        "--line-width",
+        "79",
+        "--multi-line",
+        "3",
+        "--float-to-top"
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+            "python.sortImports": true
+        }
+    },
+    "settingsSync.ignoredSettings": [
+        "-python.sortImports.path",
+        "-python.defaultInterpreterPath",
+        "-python.formatting.blackPath",
+        "-python.linting.flake8Path"
+    ],
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linter": "flake8",
+    "files.trimTrailingWhitespace": true
+}
