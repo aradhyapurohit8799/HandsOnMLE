@@ -1,0 +1,10 @@
+name: conda_tutorial
+
+conda_env:
+   conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      Model: char
+    command: "python train.py "
