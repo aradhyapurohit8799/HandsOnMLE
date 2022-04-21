@@ -1,0 +1,15 @@
+artifact_uri: mlruns/1/a5c4201ca1324fdc86f4c3dead370516/artifacts
+end_time: 1650526967677
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: a5c4201ca1324fdc86f4c3dead370516
+run_uuid: a5c4201ca1324fdc86f4c3dead370516
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1650526879549
+status: 3
+tags: []
+user_id: aradhya.purohit
