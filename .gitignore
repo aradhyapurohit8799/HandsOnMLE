@@ -1,3 +1,6 @@
 *.pyc
-*.csv
-
+src/housing_price.egg-info/**
+.vscode/**
+data/*/*.csv
+dist/**
+build/**

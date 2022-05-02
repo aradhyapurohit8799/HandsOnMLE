@@ -1,18 +1,24 @@
-# Median housing value prediction
+### Median housing value prediction problem ###
 
-The housing data can be downloaded from https://raw.githubusercontent.com/ageron/handson-ml/master/. The script has codes to download the data. We have modelled the median house value on given housing data. 
+# Project Description
+In this module, we have ingested, trained and validated the housing dataset with the following ML Models:-
+1-> Linear Regression
+2-> Decision Tree Regression Model
+3-> Random Forest Model :: Fine Tuned Model with GridSearch
 
-The following techniques have been used: 
+# Conda Environment Setup
+To setup conda environment, do the following steps:-
+1-> Open Anaconda Powershell Prompt
+2-> go to the project root directory
+3-> type  conda env create --file deploy/conda/conda_env.yml
+4-> Now activate the conda environment with conda activate command
+# Package INstallation:
+Run the following command on Anaconda Powershell Prompt to setup the packages:-
 
- - Linear regression
- - Decision Tree
- - Random Forest
-
-## Steps performed
- - We prepare and clean the data. We check and impute for missing values.
- - Features are generated and the variables are checked for correlation.
- - Multiple sampling techinuqies are evaluated. The data set is split into train and test.
- - All the above said modelling techniques are tried and evaluated. The final metric used to evaluate is mean squared error.
-
-## To excute the script
-python < scriptname.py >
+"pip install -e ."
+# Data Ingestion:
+"python src/Housing_Price_Prediction/ingest_data.py -r data/raw/ -p data/processed/"
+# Training Model:
+"python src/Housing_Price_Prediction/train.py -d data/processed/housing_train.csv -m artifacts/"
+# Model Validation:
+"python src/Housing_Price_Prediction/score.py -d data/processed/housing_test.csv -m artifacts/"
