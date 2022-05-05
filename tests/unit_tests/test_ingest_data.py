@@ -28,7 +28,7 @@ def test_fetch_data():
     Tests fetch_housing_data() function.
     """
     data.fetch_housing_data(HOUSING_URL, HOUSING_PATH)
-    assert not os.path.isfile(f"{args.raw}/housing.tgz")
+    assert os.path.isfile(f"{args.raw}/housing.tgz")
     assert os.path.isfile(f"{args.raw}/housing.csv")
 
 
