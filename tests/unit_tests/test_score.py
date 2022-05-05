@@ -1,7 +1,7 @@
 """Unit test for score.py script"""
 
-import housing_price.score as score
-from housing_price.logger import configure_logger
+import Housing_Price_Prediction.score as score
+from Housing_Price_Prediction.logger import configure_logger
 
 args = score.argparse_func()
 logger = configure_logger()

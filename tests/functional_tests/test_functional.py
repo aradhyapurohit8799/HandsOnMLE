@@ -10,7 +10,7 @@ def test_ingest():
     raw = "tests/temp/data/raw/"
     processed = "tests/temp/data/processed/"
     os.system(
-        f"python src/housing_price/ingest_data.py --raw {raw} --processed {processed}"
+        f"python src/Housing_Price_Prediction/ingest_data.py --raw {raw} --processed {processed}"
     )
     assert os.path.isfile(f"{raw}/housing.csv")
     assert os.path.isfile(f"{processed}/housing_train.csv")
@@ -25,7 +25,7 @@ def test_train():
     """Tests train.py module."""
     models = "tests/temp/artifacts/"
     dataset = "tests/temp/data/processed/housing_train.csv"
-    os.system(f"python src/housing_price/train.py -d {dataset} -m {models}")
+    os.system(f"python src/Housing_Price_Prediction/train.py -d {dataset} -m {models}")
     assert os.path.isfile(f"{models}/LinearRegression.pkl")
     assert os.path.isfile(f"{models}/RandomForestRegressor.pkl")
     assert os.path.isfile(f"{models}/DecisionTreeRegressor.pkl")
@@ -38,7 +38,7 @@ def test_score(cleanup):
     log_file = "tests/temp/log_file.txt"
 
     os.system(
-        f"python src/housing_price/score.py -d {dataset} -m {models} --mae --rmse --log-path {log_file}"
+        f"python src/Housing_Price_Prediction/score.py -d {dataset} -m {models} --mae --rmse --log-path {log_file}"
     )
 
     with open(log_file, "r") as f:
