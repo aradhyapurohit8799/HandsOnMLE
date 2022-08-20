@@ -46,9 +46,9 @@ def test_score(cleanup):
     pkls = glob(f"{models}/*.pkl")
 
     assert len(lines) == len(pkls) * 4
-    assert "DecisionTreeRegressor" in lines[0]
+    assert "DecisionTreeRegressor" in lines[8]
     assert "LinearRegression" in lines[4]
-    assert "RandomForestRegressor" in lines[8]
+    assert "RandomForestRegressor" in lines[0]
     assert lines[1].startswith("R2 score")
     assert lines[5].startswith("R2 score")
     assert lines[9].startswith("R2 score")
